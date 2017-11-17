@@ -26,6 +26,7 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <div class=".nav-header-container clearfix">
     <nav class="clearfix">
         <button class="hamburger hamburger--spin main-nav-control" type="button">
       <span class="hamburger-box">
@@ -47,8 +48,9 @@
         <p>Let's Discover the World Together</p>
         <button type="button" class='button'>Plan Your Trip</button>
     </header>
+    </div>
     <section id="welcome">
-        <div class="container">
+        <div class="container section-title">
             <h2>Welcome to Fusion</h2>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse
                 urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
@@ -73,16 +75,79 @@
             </div>
         </div>
     </section>
-    <section id="destinations" class="container-fluid">
-        <div class="row">
+    <span class="divider"></span>
+    <section id="destinations" class="container">
+        <div class="row section-title">
             <h2>Find Your Destination</h2>
             <p>Most Popular Places Are Waiting For You</p>
+            <input id="destinations-search" type="text" placeholder="Search">
         </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-4 destination-card"><img src="img/thailand.jpg" alt="Thailand" class="destination-thumb"><h4 class="destination-title">Thailand</h4></div>
+        <div id="destinations-grid" class="row">
+            <div class="col-xs-6 col-md-4 destination-card"><img src="img/thailand.jpg" alt="Thailand" class="destination-thumb">
+                <h4 class="destination-title">Thailand</h4>
+            </div>
+            <div class="col-xs-6 col-md-4 destination-card"><img src="img/australia.jpg" alt="Australia" class="destination-thumb">
+                <h4 class="destination-title">Australia</h4>
+            </div>
+            <div class="col-xs-6 col-md-4 destination-card"><img src="img/indonesia.jpg" alt="Indonesia" class="destination-thumb">
+                <h4 class="destination-title">Indonesia</h4>
+            </div>
+            <div class="col-xs-6 col-md-4 destination-card"><img src="img/france.jpg" alt="France" class="destination-thumb">
+                <h4 class="destination-title">France</h4>
+            </div>
+            <div class="col-xs-6 col-md-4 destination-card"><img src="img/malaysia.jpg" alt="Malaysia" class="destination-thumb">
+                <h4 class="destination-title">Malaysia</h4>
+            </div>
+            <div class="col-xs-6 col-md-4 destination-card"><img src="img/uae.jpg" alt="United Arab Emirates" class="destination-thumb">
+                <h4 class="destination-title">UAE</h4>
+            </div>
         </div>
     </section>
-
+    <span class="divider"></span>
+    <section id="latest-blog-posts" class="container">
+        <div class="row section-title">
+            <h2>Latests news from the Blog</h2>
+            <p>See What's On Our Minds</p>
+        </div>
+        <div id="blog-post-grid">
+            <div class="blog-column blog-column_lg">
+                <img class="featured-img" src="img/paris.png">
+                <div class="clearfix title-secondary-container">
+                    <div class="blog-post-excerpt ">
+                        <h4>Most Beautiful Place in the World - Istanbul</h4>
+                        <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus...</p>
+                    </div>
+                    <img class="secondary-img" src="img/istanbul.png">
+                </div>
+            </div>
+            <div class="blog-column blog-column_sm blog-column_middle">
+                <img class="featured-img" src="img/liberty.png">
+                <div class="blog-post-excerpt">
+                    <h4>The Statue of Liberty - Travel</h4>
+                    <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus...</p>
+                </div>
+                <img class="secondary-img" src="img/ship.png">
+            </div>
+            <div class="blog-column blog-column_sm blog-column_last">
+                <img class="featured-img" src="img/huts.png">
+                <img class="secondary-img" src="img/balcony.png">
+                <div class="blog-post-excerpt">
+                    <h4>The best Natural Paradise - Shimia</h4>
+                    <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="container">
+        <div class="row section-title">
+            <h2>What Our Clients Say</h2>
+            <p>People's Thoughts About Our Work</p>
+        </div>
+        <div class="row testimonial-slider">
+            
+        </div>
+    </section>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')

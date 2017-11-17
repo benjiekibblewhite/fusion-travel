@@ -1,23 +1,28 @@
 /* =================
 CSS Variables
 ======================*/
+
 :root {
-  --primary: #fbad27;
-  --primary-translucent: rgba(251,173,39, 0.3);
-  --secondary: #757575;
-  --text-color: #4a4a4a;
-  --small-screen: 768px;
+   --primary: #fbad27;
+   --primary-translucent: rgba(251, 173, 39, 0.3);
+   --secondary: #757575;
+   --text-color: #4a4a4a;
+   --small-screen: 768px;
 }
 
+
 /* ==========================================================================
-Default Styles
+Base Styles
 ========================================================================== */
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 body {
@@ -29,19 +34,36 @@ p {
    font-weight: 100;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
    font-weight: 700;
    color: var(--secondary);
 }
 
-h4,h5 {
+h4,
+h5 {
    font-weight: 400;
+}
+
+section {
+   margin: 40px 0;
+}
+
+@media(min-width: 770px) {
+   section {
+      margin: 80px 0;
+   }
+}
+
+.section-title {
+   text-align: center;
+   padding: 80px 0;
 }
 
 .primary-color {
    color: var(--primary);
 }
-
 
 .width-80 {
    width: 80%;
@@ -53,7 +75,8 @@ h4,h5 {
    height: 20px;
    width: 20px;
    border-radius: 50%;
-   border: 1px solid var(--primary);;
+   border: 1px solid var(--primary);
+   ;
    padding: 14px;
 }
 
@@ -77,29 +100,43 @@ h4,h5 {
 }
 
 .clearfix:after {
-   content: " "; /* Older browser do not support empty content */
+   content: " ";
+   /* Older browser do not support empty content */
    visibility: hidden;
    display: block;
    height: 0;
    clear: both;
-} 
+}
+
+/*div {*/
+/* border: 1px solid red;*/
+/*}*/
 
 /* ==========================================================================
 Icons
 ========================================================================== */
 
-
 .icon {
    height: 20px;
    width: 20px;
 }
+
+
 /* ==========================================================================
 Main Nav 
 ========================================================================== */
-nav {
+
+.nav-header-container {
    position: relative;
+}
+
+nav {
+   position: absolute;
+   display: block;
    z-index: 2;
    color: white;
+   top: 0;
+   width: 100%;
 }
 
 nav a {
@@ -111,47 +148,43 @@ nav a:hover {
    color: white;
    font-weight: bolder;
    text-decoration: none;
-   border-bottom: solid 2px rgba(255, 255, 255 ,0.5);
+   border-bottom: solid 2px rgba(255, 255, 255, 0.5);
 }
 
 .is-open {
-   background-color: rgba(55, 55, 55 ,0.5);
+   background-color: rgba(55, 55, 55, 0.5);
 }
+
 .main-nav {
    display: none;
    list-style: none;
 }
 
-.hamburger-inner, 
+.hamburger-inner,
 .hamburger-inner:before,
 .hamburger-inner:after {
- background-color: white !important;  
+   background-color: white !important;
 }
 
 @media(min-width: 770px) {
    /*hide main-nav controls, change layout of menu on larger-than-mobile screens*/
    .main-nav-control,
    .main-nav-control .hamburger-box,
-   .main-nav-control .hamburger-inner{
+   .main-nav-control .hamburger-inner {
       display: none !important;
    }
-   
-  
    .main-nav {
       width: 80%;
       margin: 0 auto;
       display: block !important;
       justify-content: flex-start;
       padding: 40px 0;
-      border-bottom: solid 0.5px rgba(255,255,255, 0.5);
+      border-bottom: solid 0.5px rgba(255, 255, 255, 0.5);
    }
-   
-   
-   .main-nav-item{
+   .main-nav-item {
       text-align: center;
       display: inline-block;
       float: left;
-
    }
    .main-nav-item:first-child {
       margin-right: 10px;
@@ -159,10 +192,9 @@ nav a:hover {
    .main-nav-item:not(:first-child):not(:last-child) {
       margin: 0 10px;
    }
-   
    .hotline {
-     flex-basis: 300px;
-     float: right;
+      flex-basis: 300px;
+      float: right;
    }
 }
 
@@ -175,7 +207,7 @@ Header
    background-image: url(../img/banner.jpg);
    background-position: center center;
    position: relative;
-   top: -80px; 
+   top: 0;
    width: 100%;
    background-size: cover;
    overflow: hidden;
@@ -184,34 +216,72 @@ Header
    color: white;
 }
 
-@media(min-width: 770px) { 
+@media(min-width: 770px) {
    .jumbotron {
       padding: 200px 0;
    }
 }
 
+
 /* ==========================================================================
 Welcome & Promises  
 ========================================================================== */
 
-#welcome .container:first-child {
-   margin-bottom: 20px;
-   text-align: center;
-}
-
-@media(min-width: 770px) { 
-   #welcome .container:first-child {
-   margin-bottom: 80px;
-}
+#welcome {
+   margin-top: -80px;
 }
 
 .promise-card {
    padding: 80px 40px 8px;
 }
 
+
 /* ==========================================================================
 Destination Gride
 ========================================================================== */
+
+.divider {
+   display: block;
+   width: 80%;
+   margin: auto;
+   border-top: solid 0.25px rgba(0, 0, 0, 0.2);
+}
+
+#destinations {
+   text-align: center;
+}
+
+#destinations-title {
+   padding: 80px 0;
+}
+
+#destinations-search {
+   height: 32px;
+   margin: 64px 0 0 -40px;
+   /*offset so text is centered, ignoring background img*/
+   border: none;
+   background-image: url(../svg/search.svg);
+   background-repeat: no-repeat;
+   padding-left: 40px;
+}
+
+#destinations-search::-webkit-input-placeholder {
+   text-align: center;
+}
+
+#destinations-search:-moz-placeholder {
+   /* Firefox 18- */
+   text-align: center;
+}
+
+#destinations-search::-moz-placeholder {
+   /* Firefox 19+ */
+   text-align: center;
+}
+
+#destinations-search:-ms-input-placeholder {
+   text-align: center;
+}
 
 .destination-card {
    color: white;
@@ -220,9 +290,9 @@ Destination Gride
    position: relative;
 }
 
-
 .destination-thumb {
    position: relative;
+   margin: 16px 0;
    width: 100%;
 }
 
@@ -234,4 +304,114 @@ Destination Gride
    margin: auto;
    width: 80px;
    margin: auto;
+}
+
+
+/* ==========================================================================
+Blog Grid
+========================================================================== */
+
+#blog-post-grid {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+.blog-column {
+   margin: 16px;
+   flex: 1 1;
+}
+
+.secondary-img {
+   display: none;
+}
+
+.blog-column:after {
+   content: '';
+   width: 80%;
+   height: 1px;
+   display: block;
+   background-color: rgba(0, 0, 0, 0.2);
+   margin: 16px auto;
+}
+
+.blog-post-excerpt {
+   padding: 16px;
+}
+
+
+#blog-post-grid img  {
+   width: 100%;
+   margin: 16px 0;
+}
+
+
+@media (min-width: 600px){
+    /*two column layout - third column takes up full width in second row*/
+   .blog-column_lg {
+      flex: 2 1;
+   }
+ 
+    .blog-column_last {
+       flex-basis: 100%;
+    }
+ 
+    .blog-column_last .featured-img {
+       width: 30% !important;
+       margin-right: 16px !important;
+       float: left;
+    }
+ 
+   .blog-column:after {
+      display: none;
+   }
+   
+    #blog-post-grid {
+      flex-direction: row;
+   }
+   
+
+}
+
+@media(min-width: 992px) {
+   /*three column layout*/
+   .secondary-img {
+      display: block;
+   }
+   
+   .blog-column_sm {
+      flex: 1 1;
+   }
+   
+   .blog-column_lg .blog-post-excerpt {
+      float: left;
+      width: 50%;
+   }
+   
+   .blog-column_lg .title-secondary-container {
+      position: relative;
+   }
+   
+   .blog-column_lg .secondary-img {
+      width: 50% !important;
+      vertical-align: middle;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+   }
+   
+   .blog-column_middle {
+      position: relative;
+   }
+   
+   .blog-column_middle .secondary-img {
+      position: absolute;
+      bottom: 0;
+   }
+   
+   .blog-column_last .featured-img {
+      width: 100% !important;
+      margin: 16px 0 !important;
+    }
+   
 }
